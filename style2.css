@@ -1,0 +1,39 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+
+h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  padding-top: 100px;
+}
+.wrapper {
+	background: #3741d0;
+	background: -moz-linear-gradient(top,  #3741d0 0%, #332180 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3741d0), color-stop(100%,#332180));
+	background: -webkit-linear-gradient(top,  #3741d0 0%,#332180 100%);
+	background: -o-linear-gradient(top,  #3741d0 0%,#332180 100%);
+	background: -ms-linear-gradient(top,  #3741d0 0%,#332180 100%);
+	background: linear-gradient(to bottom,  #3741d0 0%,#332180 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3741d0', endColorstr='#332180',GradientType=0 );
+	height:100vh;
+	padding-top: 12px;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center its child elements horizontally */
+
+    height: 100vh; /* Ensure the wrapper takes the full height of the viewport */
+
+	@media (min-width: 600px) {
+		padding-top: 24px;
+	}
+}
+.wrapper img{
+    border-radius: 175px;
+    max-width: 25%;
+}

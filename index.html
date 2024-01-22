@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😭</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="tenor2.gif" alt="Your GIF">
+        <h1>Would you like to go out with me??</h1>
+        <div class="btn-wrap static">
+          <a href="javascript:void(0)" class="btn" title="Yes" id="yes">
+            <span>Yes</span>
+          </a>
+        </div>
+      
+        <div class="btn-wrap tricky">
+          <a href="javascript:void(0)" class="btn" title="No">
+            <span></span>
+          </a>
+        </div>
+        
+      </div>
+    <script src="index.js"></script>
+    <script>
+        const yesbtn = document.getElementById("yes");
+
+        yesbtn.onclick = function () {
+            console.log("You are gay");
+        }
+
+        function moveButtonRandomly() {
+            $(".tricky").css({
+                left: (Math.random() * 90) + "%",
+                top: (Math.random() * 90) + "%",
+                transform: 'scale(1)'
+            });
+        }
+
+        // Attach the mouseover event handler
+        $(".tricky").on({
+            mouseover: function () {
+                moveButtonRandomly();
+            }
+        });
+
+        // Add hover effect using CSS class toggle
+        $(".btn-wrap").hover(function () {
+            $(this).toggleClass('active');
+        });
+
+        // Touchstart event handler for mobile devices
+        $('.tricky').bind('touchstart', function () {
+            moveButtonRandomly();
+        });
+    </script>
+</body>
+</html>
